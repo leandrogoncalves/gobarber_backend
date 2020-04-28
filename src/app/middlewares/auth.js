@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { promissify } from 'util';
+// import { promissify } from 'util';
 import authConfig from '../../config/auth';
 
 export default async (req, res, next) => {
@@ -17,7 +17,7 @@ export default async (req, res, next) => {
     jwt.verify(token, authConfig.secret, (err, decoded) => {
       req.userId = decoded.id;
 
-      console.log(decoded);
+      // console.log(decoded);
     });
 
     return next();
