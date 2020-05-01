@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #Cria migration
-yarn sequelize migration:create --name=create-files
+yarn sequelize migration:create --name=create-appointments
 
 #Roda migrations
 yarn sequelize db:migrate
