@@ -1,12 +1,12 @@
 module.exports = {
-  host: 'smtp.mailtrap.io',
-  port: 2525,
-  secure: false,
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
+  secure: process.env.MAIL_SECURIRY,
   auth: {
-    user: '4b809f44517e60',
-    pass: '054765b9980318',
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
   },
   default: {
-    from: 'Equipe Gobarber <noreply@gobarber.com>',
+    from: process.env.MAIL_FROM,
   },
 };
